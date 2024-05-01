@@ -52,13 +52,12 @@ df.head()
 df.isnull().any()
 ```
 ![image](https://github.com/soaibur/Data-Cleaning-Project-Pandas/assets/140079359/36584e6c-d8ee-4b09-b205-2d304fc3821b)
+
 Great! No missing value.
 
 ## Rename columns : Country, 2019, 2020, 2021
 ```bash
-df = df.rename(columns={'REGIONS/COUNTRIES': 
-'Country', 'Q1-Q4 2019': '2019', 'Q1-Q4 2020': '2020', 
-'Q1-Q4 2021': '2021'})
+df = df.rename(columns={'REGIONS/COUNTRIES': 'Country', 'Q1-Q4 2019': '2019', 'Q1-Q4 2020': '2020', 'Q1-Q4 2021': '2021'})
 df.head()
 ```
 ![image](https://github.com/soaibur/Data-Cleaning-Project-Pandas/assets/140079359/8fac134d-ab52-4195-9f69-b33546458a69)
@@ -68,12 +67,7 @@ I was careful of the whitespaces during making this list.
 ```bash
 pd.set_option('display.max_rows', None)
 df
-non_countries= ["EUROPE", "EU 27 countries + EFTA + UK", 
-"OTHER COUNTRIES", "RUSSIA, TURKEY & OTHER EUROPE", 
-"OTHER COUNTRIES/REGIONS ", "AMERICA", "NAFTA", 
-"CENTRAL & SOUTH AMERICA", "ASIA/OCEANIA/MIDDLE EAST", 
-"ASEAN",  "AFRICA", "ALL COUNTRIES/REGIONS", 
-"TOTAL OICA MEMBERS "]
+non_countries= ["EUROPE", "EU 27 countries + EFTA + UK", "OTHER COUNTRIES", "RUSSIA, TURKEY & OTHER EUROPE", "OTHER COUNTRIES/REGIONS ", "AMERICA", "NAFTA", "CENTRAL & SOUTH AMERICA", "ASIA/OCEANIA/MIDDLE EAST", "ASEAN",  "AFRICA", "ALL COUNTRIES/REGIONS", "TOTAL OICA MEMBERS "]
 ```
 
 ## Delete the rows that have any of the items of 'non_countries' list
